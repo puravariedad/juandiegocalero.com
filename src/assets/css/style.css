@@ -750,38 +750,30 @@ input {
 .heroe-action .chev {
 	margin-left: 1rem;
 }
-.skip-projects-prev {
+.skip-projects {
+	display: flex;
+	gap: 2rem;
+	justify-content: space-between;
+	margin-top: 4rem;
+}
+.skip-projects-side {
+	flex: 1;
+}
+.skip-projects-next {
 	text-align: right;
 }
-.skip-projects-next,
-.skip-projects-prev {
-	position: relative;
+.skip-projects a {
+	display: flex;
+	align-items: center;
 }
-.skip-projects-next::before,
-.skip-projects-prev::before{
+.skip-projects-next a {
+	justify-content: flex-end;
+}
+.skip-projects small {
+	display: block;
 	font-size: 0.9rem;
-	position: absolute;
+	opacity: 0.7;
 }
-.skip-projects-next::before {
-	content: 'Previous project';
-	bottom: -1.5rem;
-	left: 2.5rem;
-}
-.skip-projects-prev::before {
-	content: 'Next project';
-	bottom: -1.5rem;
-	right: 2.5rem;
-}
-.postid-339 .skip-projects-next::before {
-	content: '';
-}
-.postid-76 .skip-projects-prev::before{
-	content: 'First project';
-}
-.postid-76 .skip-projects-first {
-	display: inline-block!important;
-}
-.skip-projects a,
 .flex-m {
 	display: flex;
 	align-items: center;
@@ -938,10 +930,26 @@ h3.work-post--clear {
 *About page*
 **********************************************************************************************
 */
-.page-id-13 .pf {
+.about-page .pf {
 	z-index: 1;
 }
-.page-id-13 .footer {
+.about_flex {
+	display: flex;
+	align-items: flex-start;
+}
+.about_flex .avatar_flex {
+	border-radius: 999px;
+	display: block;
+	flex-shrink: 0;
+	height: 140px;
+	margin-right: 1rem;
+	object-fit: cover;
+	width: 140px;
+}
+.about_flex .h4 {
+	margin-top: 0;
+}
+body:has(.about-page) .footer {
 	background: var(--bg);
 	position: relative;
 	z-index: 2;
@@ -998,5 +1006,62 @@ h3.work-post--clear {
 	}
 	:where(.wp-block-columns.is-layout-flex) {
 		gap: 1em;
+	}
+}
+/*
+**********************************************************************************************
+*Project pages: layout helpers for the HTML in src/projects/*.html*
+**********************************************************************************************
+*/
+.work-body .cols {
+	display: flex;
+	gap: 2em;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.work-body .col {
+	flex: 1 1 0;
+	min-width: 0;
+}
+.work-body .col[style*="--w"] {
+	flex: 0 1 calc(var(--w) * 1%);
+}
+.work-body .col-center {
+	text-align: center;
+}
+.work-body .col-center img {
+	margin: 0 auto;
+}
+.work-body .center {
+	text-align: center;
+}
+.work-body .center img {
+	margin: 0 auto;
+}
+.work-body .spacer {
+	height: 2rem;
+}
+.work-body img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+.work-body figure {
+	margin: 0;
+}
+.work-body h4 {
+	margin-top: 0;
+}
+@media (max-width: 769px) {
+	.work-body .cols {
+		flex-direction: column;
+		gap: 1em;
+	}
+	.work-body .cols-reverse {
+		flex-direction: column-reverse;
+	}
+	.work-body .col {
+		flex: none;
+		width: 100%;
 	}
 }

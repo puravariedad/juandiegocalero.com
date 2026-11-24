@@ -16,7 +16,7 @@ import heroImg from '../assets/img/home.gif'
           <div class="heroe-action row">
             <div class="btn-home">
               <a
-                href="https://juandiegocalero.com/contact-me/"
+                href="/contact-me/"
                 class="btn btn-l prim mr-1"
               >Contact me</a>
             </div>

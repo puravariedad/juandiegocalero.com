@@ -12,7 +12,7 @@ const open = ref(false)
     <div class="container">
       <div class="row">
         <div class="col-30 pr">
-          <a href="https://juandiegocalero.com" class="logo">
+          <a href="/" class="logo">
             <img :src="logo" alt="Logo site UX / UI">Juandiego Calero
           </a>
           <div id="burgAction" class="burgmenu" @click="open = !open">

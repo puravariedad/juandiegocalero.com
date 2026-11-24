@@ -10,7 +10,7 @@ const year = new Date().getFullYear()
     <div class="container footer-top mb-1">
       <div class="row">
         <div class="col-30 footer-links">
-          <a href="https://juandiegocalero.com" class="pl-0">Juandiego Calero</a>
+          <a href="/" class="pl-0">Juandiego Calero</a>
         </div>
         <div class="col-70 text-right rmvlist footer-links">
           <NavMenu :items="mainMenu" />
